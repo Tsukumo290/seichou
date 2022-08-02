@@ -1,0 +1,7 @@
+# usersテーブル
+
+# recordsテーブル
+
+# memosテーブル
+
+# expensesテーブル
