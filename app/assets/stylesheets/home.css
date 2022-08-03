@@ -34,9 +34,6 @@
   color: rgb(231, 226, 125);
 }
 
-.home-main {
-  height: calc(100vh - 80px - 50px);
-}
 .animation-area {
   width: 1000px;
   height: 1000px;
@@ -46,8 +43,8 @@
   transform: translateY(-50%);
 }
 #circle {
-  width: 1000px;
-  height: 1000px;
+  width: 1100px;
+  height:1000px;
   position: absolute;
   border-radius: 50%;
   top: 0;
@@ -58,10 +55,10 @@
 .overlay {
   width: 0;
   height: 0;
-  border-top: 490px solid #FFF;
+  border-top: 500px solid #FFF;
   border-right: 490px solid transparent;
-  border-bottom: 490px solid #FFF;
-  border-left: 490px solid #FFF;
+  border-bottom: 500px solid #FFF;
+  border-left: 600px solid #FFF;
 }
 .contents {
   position: absolute;
@@ -73,21 +70,21 @@
 }
 .one {
   top: 470px;
-  right: 70px;
+  right: 0px;
 }
 .two {
   top: 100px;
-  left: 430px;
+  left: 482px;
   transform: rotate(-90deg);
 }
 .three {
   bottom: 470px;
-  left: 50px;
+  left: 70px;
   transform: rotate(-180deg);
 }
 .control {
   position: absolute;
-  top: 50%;
+  top: 49%;
   right: 15%;
   transform: translateY(-50%);
   text-align: center;
@@ -107,6 +104,10 @@
   cursor: pointer;
   transform: rotate(-180deg);
 }
-.footer {
-  height: 50px;
+
+#animation {
+  position: absolute;
+  top: 270px;
+  left: 270px;
+  max-height: 150px;
 }
