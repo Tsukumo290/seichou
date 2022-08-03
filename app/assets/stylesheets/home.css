@@ -7,17 +7,17 @@
 }
 
 .header {
-  height: 80px;
+  height: 100px;
 }
 .header_bar {
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 100px;
 }
 .header-title {
-  font-size: 24px;
+  font-size: 50px;
   color: black;
   position: sticky;
   z-index: 1;
@@ -110,4 +110,44 @@
   top: 270px;
   left: 270px;
   max-height: 150px;
+}
+
+/*せいちょうきろくのトップページCSS*/
+.seichou {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Hannari";
+}
+.seichou-header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  border-bottom: 1px solid black;
+}
+.seichou-title a {
+  text-decoration: none;
+  font-size: 50px;
+  color: black;
+}
+.seichou-new a {
+  text-decoration: none;
+  font-size: 32px;
+  color: black;
+}
+
+.seichou-main {
+  height: calc(100vh - 100px);
+  width: 100vw;
+  /*background: linear-gradient(to top, rgb(234, 224, 156), rgb(249, 245, 22));*/
+}
+.records {
+  height: calc(100vh - 100px); 
+  width: 864px;
+  background-color: #fff;
+  margin: 0 0 0 600px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }

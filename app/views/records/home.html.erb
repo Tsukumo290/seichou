@@ -1,11 +1,11 @@
 <div class="screen">
 <header class="header">
       <div class="header_bar">
-        <h1 class="header-title">成長記録</h1>
+        <h1 class="header-title">たけのこ</h1>
         <div class="user">
         <% if user_signed_in? %>
           <%= link_to current_user.name, "#" %>
-          <%= link_to "ログアウト", destroy_user_session_path %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
         <% else %>
           <%= link_to "ログイン", new_user_session_path %>
           <%= link_to "新規登録", new_user_registration_path %>
