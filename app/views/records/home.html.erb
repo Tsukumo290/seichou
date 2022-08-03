@@ -1,18 +1,42 @@
+<div class="screen">
 <header class="header">
       <div class="header_bar">
         <h1 class="header-title">成長記録</h1>
         <div class="user">
-          <a> "ログイン"</a>
-          <a>"新規登録"</a>
+        <% if user_signed_in? %>
+          <%= link_to current_user.name, "#" %>
+          <%= link_to "ログアウト", destroy_user_session_path %>
+        <% else %>
+          <%= link_to "ログイン", new_user_session_path %>
+          <%= link_to "新規登録", new_user_registration_path %>
         </div>
+        <% end %>
       </div>
     </header>
 
-<body>
-  <div class="body">
+  <div class="home-main">
+    <div class="animation-area">
+      <div class="overlay"></div>
+      <div id='animation'></div>
+      <div id="circle">
+        <div class="contents one">
+          <%= link_to "せいちょうきろく", "#" %>
+        </div>
+        <div class="contents two">
+          <%= link_to "かけいぼ", "#" %>
+        </div>
+        <div class="contents three">
+          <%= link_to "めも", "#" %>
+        </div>
+      </div>
+    </div>
   </div>
-</body>
-
+  <div class="control">
+    <%= image_tag 'arrow.png', id: 'upBtn' %>
+    <h3>カテゴリー</h3>
+    <%= image_tag 'arrow.png', id: 'downBtn' %>
+  </div>
+</div>
 
 
 <footer class="footer">

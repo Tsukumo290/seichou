@@ -1,27 +1,112 @@
+.screen {
+  background: linear-gradient(to right, rgb(146, 185, 149), rgb(35, 151, 70));
+  height: 100vh;
+  width: 100vw;
+  font-family: "Hannari";
+  position: relative;
+}
+
 .header {
   height: 80px;
-  background-color: #e0ebaf;
-  border-bottom: 2px solid lightgray;
 }
 .header_bar {
   height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
+  padding: 0 100px;
 }
 .header-title {
-  font-size: 20px;
-  font-weight: 30px;
-  color: #00a960;
+  font-size: 24px;
+  color: black;
+  position: sticky;
+  z-index: 1;
+}
+.user a {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+  font-size: 18px;
+  color: white;
+  transition: 0.3s;
+}
+.user a:hover {
+  color: rgb(231, 226, 125);
 }
 
-.body {
+.home-main {
   height: calc(100vh - 80px - 50px);
-  background-color: white;
 }
-
+.animation-area {
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  transform: translateY(-50%);
+}
+#circle {
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 1s;
+}
+.overlay {
+  width: 0;
+  height: 0;
+  border-top: 490px solid #FFF;
+  border-right: 490px solid transparent;
+  border-bottom: 490px solid #FFF;
+  border-left: 490px solid #FFF;
+}
+.contents {
+  position: absolute;
+}
+.contents a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+}
+.one {
+  top: 470px;
+  right: 70px;
+}
+.two {
+  top: 100px;
+  left: 430px;
+  transform: rotate(-90deg);
+}
+.three {
+  bottom: 470px;
+  left: 50px;
+  transform: rotate(-180deg);
+}
+.control {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.control img {
+  width: 12%;
+}
+.control h3 {
+  color: #fff;
+  font-size: 24px;
+  margin: 10px 0;
+}
+#upBtn {
+  cursor: pointer;
+}
+#downBtn {
+  cursor: pointer;
+  transform: rotate(-180deg);
+}
 .footer {
   height: 50px;
-  background-color: #b0ca71;
 }
