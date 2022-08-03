@@ -1,0 +1,2 @@
+class Redord < ApplicationRecord
+end
