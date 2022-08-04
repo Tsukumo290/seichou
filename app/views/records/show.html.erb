@@ -14,7 +14,13 @@
     <div class="seichou-main">
       <div class="main-contents">
         <div class="records">
-          <div class="omoide">おもいで</div>
+          <div class="edit-delete">
+            <div class="omoide">おもいで</div>
+            <div class="edit-delete-btn">
+              <div><%= link_to "ぬりかえる", edit_record_path(@record.id) %></div>
+              <div><%= link_to "けす", record_path(@record.id), method: :delete %></div>
+            </div>
+          </div>
           <% @records.each do |record| %>
             <div class="records-content">
             <div class="title-date">
@@ -26,11 +32,13 @@
           <% end %>
         </div>
         <div class="record">
+          <div class="record-width">
           <div class="content"><%= simple_format(@record.content) %></div>
           <div class="image"><%= image_tag @record.image.variant(resize: '500x500') %></div>
           <div class="date-title">
               <%= @record.created_at.strftime('%Y/%m/%d') %>
               <%= @record.title %>
+          </div>
           </div>
         </div>
       </div>
