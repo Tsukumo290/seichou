@@ -2,7 +2,6 @@
   background: linear-gradient(to right, rgb(146, 185, 149), rgb(35, 151, 70));
   height: 100vh;
   width: 100vw;
-  font-family: "Hannari";
   position: relative;
 }
 
@@ -116,7 +115,6 @@
 .seichou {
   height: 100vh;
   width: 100vw;
-  font-family: "Hannari";
   background-color: #f1f2ed;
 }
 .seichou-header {

@@ -11,5 +11,7 @@ class RecordsController < ApplicationController
   end
 
   def create
+
   end
+  
 end
