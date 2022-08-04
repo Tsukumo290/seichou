@@ -26,7 +26,11 @@
         </div>
         <div class="record">
           <div class="title-date">
+              <%= @record.created_at.strftime('%Y/%m/%d') %>
+              <%= @record.title %>
           </div>
+          <div class="image"><%= @record.image %></div>
+          <div class="content"><%= @record.content %></div>
         </div>
       </div>
     </div>

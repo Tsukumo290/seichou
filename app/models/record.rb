@@ -5,5 +5,4 @@ class Record < ApplicationRecord
   validates :image,   presence: true
   validates :title,   presence: true
   validates :content, presence: true
-
 end

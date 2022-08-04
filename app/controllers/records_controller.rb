@@ -19,6 +19,11 @@ class RecordsController < ApplicationController
     end
   end
 
+  def show
+    @records = Record.order(created_at: :desc)
+    @record = Record.find(params[:id])
+  end
+
   private
   def record_params
     params.require(:record).permit(:title, :content, :image, :height, :weight).merge(user_id: current_user.id)

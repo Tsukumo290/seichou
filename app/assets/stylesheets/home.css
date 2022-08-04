@@ -149,14 +149,15 @@
   height: calc(100vh - 100px); 
   width: 320px;
   background-color: #CBC3BC;
-  border-radius: 10px 0 0 0;
-  border-right: 1px solid black;
+  border-radius: 15px 0 0 0;
+  border-right: 1px solid #f1f2ed;
+  overflow: scroll;
 }
 .records-content {
   background-color: #f1f2ed;
   color: black;
-  margin: 24px;
-  border-radius: 10px;
+  margin: 24px 12px;
+  border-radius: 15px;
   padding: 10px;
 }
 .record {
@@ -164,5 +165,5 @@
   width: 864px;
   background-color: #fff;
   background-color: #CBC3BC;
-  border-radius: 0 10px 0 0;
+  border-radius: 0 15px 0 0;
 }
