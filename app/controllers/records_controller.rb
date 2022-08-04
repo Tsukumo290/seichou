@@ -29,6 +29,7 @@ class RecordsController < ApplicationController
   end
 
   def update
+    @record = Record.find(params[:id])
     if @record.update(record_params)
       redirect_to record_path(@record.id)
     else

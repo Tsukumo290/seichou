@@ -1,0 +1,28 @@
+<div class="new-main">
+<header>
+  <div class="seichou-header">
+      <div class="seichou-title">
+        <%= link_to "たけのこ", root_path %>
+      </div>
+      <div class="seichou-new">
+        <%= link_to "もどる", record_path(@record.id) %>
+      </div>
+  </div>
+</header>
+<div class="contents-new">
+  <div class="new">
+  <div class="container">
+    <%= form_with(model: @record, local: true) do |form| %>
+      <div><%= form.file_field :image %></div>
+      <div><%= form.text_field :title, placeholder: "タイトル" %></div>
+      <div><%= form.text_area :content, placeholder: "おもいで", rows: "10" %></div>
+      <div>
+      <%= form.text_field :height, placeholder: "しんちょう" %>
+      <%= form.text_field :weight, placeholder: "たいじゅう" %>
+      </div>
+      <%= form.submit "さくせい" %>
+    <% end %>
+  </div>
+  </div>
+</div>
+</div>
