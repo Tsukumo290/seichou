@@ -14,23 +14,24 @@
     <div class="seichou-main">
       <div class="main-contents">
         <div class="records">
+          <div class="omoide">おもいで</div>
           <% @records.each do |record| %>
             <div class="records-content">
             <div class="title-date">
               <%= record.created_at.strftime('%Y/%m/%d')%>
               <%= link_to record.title, record_path(record.id) %>
             </div>
-            <div calss="record-text"><%= record.content.truncate(30) %></div>
+            <div class="record-text"><%= record.content.truncate(50) %></div>
             </div>
           <% end %>
         </div>
         <div class="record">
-          <div class="title-date">
+          <div class="content"><%= simple_format(@record.content) %></div>
+          <div class="image"><%= image_tag @record.image.variant(resize: '500x500') %></div>
+          <div class="date-title">
               <%= @record.created_at.strftime('%Y/%m/%d') %>
               <%= @record.title %>
           </div>
-          <div class="image"><%= @record.image %></div>
-          <div class="content"><%= @record.content %></div>
         </div>
       </div>
     </div>

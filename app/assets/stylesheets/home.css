@@ -150,15 +150,21 @@
   width: 320px;
   background-color: #CBC3BC;
   border-radius: 15px 0 0 0;
-  border-right: 1px solid #f1f2ed;
+  /*border-right: 1px solid #f1f2ed;*/
   overflow: scroll;
 }
 .records-content {
   background-color: #f1f2ed;
   color: black;
-  margin: 24px 12px;
+  margin: 24px 0 24px 24px;
   border-radius: 15px;
   padding: 10px;
+  border: 1px solid gray;
+  height: 120px;
+  width: 290px;
+}
+.record-text {
+  word-break: break-all;
 }
 .record {
   height: calc(100vh - 100px); 
@@ -166,4 +172,28 @@
   background-color: #fff;
   background-color: #CBC3BC;
   border-radius: 0 15px 0 0;
+  display: flex;
+  padding: 60px 15px 0 15px;
+}
+.omoide {
+  padding: 30px 0 0 50px;
+  font-size: 30px;
+}
+
+.date-title {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  margin-left: 45px;
+}
+.image {
+  margin-left: 50px;
+}
+.content {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  margin-top: 200px;
+  margin-left: 100px;
+  font-size: 18px;
+  word-break: break-all;
+  height: 400px;
 }
