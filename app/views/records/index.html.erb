@@ -21,7 +21,7 @@
               <%= record.created_at.strftime('%Y/%m/%d')%>
               <%= link_to record.title, record_path(record.id) %>
             </div>
-            <div calss="record-text"><%= record.content.truncate(30) %></div>
+            <div class="record-text"><%= record.content.truncate(50) %></div>
             </div>
           <% end %>
         </div>

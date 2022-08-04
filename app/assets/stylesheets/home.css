@@ -152,6 +152,8 @@
   border-radius: 15px 0 0 0;
   /*border-right: 1px solid #f1f2ed;*/
   overflow: scroll;
+  border-top: 1px groove gray;
+  border-left: 1px groove gray;
 }
 .records-content {
   background-color: #f1f2ed;
@@ -174,10 +176,17 @@
   border-radius: 0 15px 0 0;
   display: flex;
   padding: 60px 15px 0 15px;
+  border-top: 1px groove gray;
+  border-right: 1px groove gray;
 }
 .omoide {
   padding: 30px 0 0 50px;
   font-size: 30px;
+}
+.title-date a {
+  text-decoration: none;
+  color: black;
+  background:linear-gradient(transparent 70%, #ffff00f0 0%);
 }
 
 .date-title {
@@ -213,12 +222,16 @@
   justify-content: center;
   background-color: #CBC3BC;
   padding-top: 30px;
+  border-radius: 15px 15px 0 0;
+  border: 1px groove gray;
 }
 .container{
   height: 600px;
   width:800px;
   background-color: #fff;
   padding: 30px 24px 24px;
+  border-radius: 15px;
+  border: 1px groove gray;
 }
 .container input {
   height: 50px;
