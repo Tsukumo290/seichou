@@ -148,14 +148,21 @@
 .records {
   height: calc(100vh - 100px); 
   width: 320px;
-  background-color: #fff;
-  border: 1px solid black;
   background-color: #CBC3BC;
+  border-radius: 10px 0 0 0;
+  border-right: 1px solid black;
+}
+.records-content {
+  background-color: #f1f2ed;
+  color: black;
+  margin: 24px;
+  border-radius: 10px;
+  padding: 10px;
 }
 .record {
   height: calc(100vh - 100px); 
   width: 864px;
   background-color: #fff;
-  border: 1px solid black;
   background-color: #CBC3BC;
+  border-radius: 0 10px 0 0;
 }

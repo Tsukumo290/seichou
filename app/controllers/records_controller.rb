@@ -3,7 +3,7 @@ class RecordsController < ApplicationController
   end
 
   def index
-    @records = Record.all
+    @records = Record.order(created_at: :desc)
   end
 
   def new
