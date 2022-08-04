@@ -4,8 +4,10 @@ class RecordsController < ApplicationController
   end
 
   def eight
-    @eight = Record.where('created_at like ?','%-08-%')
-    @nine = Record.where('created_at like ?','%-09-%')
+    @eight = Record.where('created_at like ?','%-08-%').order(created_at: :desc)
+  end
+  def nine
+    @nine = Record.where('created_at like ?','%-09-%').order(created_at: :desc)
   end
 
   def index

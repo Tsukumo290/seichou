@@ -15,25 +15,25 @@
       <div class="main-contents">
         <div class="month">
           <div class="menu-title">アルバム</div>
-          <select class="menu">
-            <option>月を選択してください</option>
-            <option>1月のアルバム</option>
-            <option>2月のアルバム</option>
-            <option>3月のアルバム</option>
-            <option>4月のアルバム</option>
-            <option>5月のアルバム</option>
-            <option>6月のアルバム</option>
-            <option>7月のアルバム</option>
-            <option>8月のアルバム</option>
-            <option>9月のアルバム</option>
-            <option>10月のアルバム</option>
-            <option>11月のアルバム</option>
-            <option>12月のアルバム</option>
+          <select class="menu" id="month" onChange="location.href=value;">
+            <option value="">月を選択してください</option>
+            <option value="">1月のアルバム</option>
+            <option value="">2月のアルバム</option>
+            <option value="">3月のアルバム</option>
+            <option value="">4月のアルバム</option>
+            <option value="">5月のアルバム</option>
+            <option value="">6月のアルバム</option>
+            <option value="">7月のアルバム</option>
+            <option value="/eight">8月のアルバム</option>
+            <option value="/nine">9月のアルバム</option>
+            <option value="">10月のアルバム</option>
+            <option value="">11月のアルバム</option>
+            <option value="">12月のアルバム</option>
           </select>
         </div>
         <div class="records">
           <div class="omoide">おもいで</div>
-          <% @records.each do |record| %>
+          <% @records.first(10).each do |record| %>
             <div class="records-content">
             <div class="title-date">
               <%= record.created_at.strftime('%Y/%m/%d')%>
