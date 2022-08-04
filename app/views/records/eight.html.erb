@@ -1,0 +1,33 @@
+<div class="seichou">
+  <header>
+    <div class="seichou-header">
+        <div class="seichou-title">
+          <%= link_to "たけのこ", root_path %>
+        </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="seichou-main">
+      <div class="main-contents">
+        <div class="records">
+          <div class="omoide">おもいで</div>
+          <% @eight.each do |eight| %>
+            <div class="records-content">
+            <div class="title-date">
+              <%= eight.created_at.strftime('%Y/%m/%d')%>
+              <%= link_to eight.title, "#" %>
+            </div>
+            <div class="record-text"><%= eight.content.truncate(50) %></div>
+            </div>
+          <% end %>
+        </div>
+        <div class="record">
+          <div class="title-date">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</div>

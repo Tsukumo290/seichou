@@ -112,6 +112,18 @@
 }
 
 /*せいちょうきろくのトップページCSS*/
+.month {
+  padding-top: 20px;
+  padding-right: 105px;
+}
+.menu-title {
+  font-size: 24px;
+}
+.menu {
+  height: 30px;
+  border-radius: 4px;
+  padding: 3px;
+}
 .seichou {
   height: 100vh;
   width: 100vw;

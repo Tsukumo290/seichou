@@ -1,5 +1,11 @@
 class RecordsController < ApplicationController
+
   def home
+  end
+
+  def eight
+    @eight = Record.where('created_at like ?','%-08-%')
+    @nine = Record.where('created_at like ?','%-09-%')
   end
 
   def index
