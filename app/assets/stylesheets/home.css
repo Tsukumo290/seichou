@@ -197,3 +197,43 @@
   word-break: break-all;
   height: 400px;
 }
+
+/*newページのCSS*/
+.contents-new {
+  height: calc(100vh - 100px); 
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: #f1f2ed;
+}
+.new {
+  height: calc(100vh - 100px);  
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  background-color: #CBC3BC;
+  padding-top: 30px;
+}
+.container{
+  height: 600px;
+  width:800px;
+  background-color: #fff;
+  padding: 30px 24px 24px;
+}
+.container input {
+  height: 50px;
+  width: 100%;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.container textarea {
+  height: 200px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+}
+.new-main {
+  background-color: #f1f2ed;
+  height: calc(100vh - 100px); 
+  width: 100vw;
+}
