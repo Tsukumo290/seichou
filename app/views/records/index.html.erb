@@ -19,6 +19,7 @@
             <%= record.created_at.strftime('%Y/%m/%d')%>
             <%= record.title %>
           </div>
+          <div><%= record.content.truncate(30) %></div>
         <% end %>
       </div>
       <div class="record">
