@@ -31,52 +31,50 @@
             <option value="">12月のアルバム</option>
           </select>
         </div>
-        <div class="record-parent">
-          <div class="records">
-            <div class="edit-delete">
-              <div class="memory">おもいで</div>
-              <div class="edit-delete-btn" id="fadein-btn">
-                <div><%= link_to "ぬりかえる", edit_record_path(@record.id) %></div>
-                <div><%= link_to "けす", record_path(@record.id), method: :delete %></div>
-              </div>
-              <script>$("#fadein-btn").fadeIn(1000);</script>
+        <div class="records">
+          <div class="edit-delete">
+            <div class="memory">おもいで</div>
+            <div class="edit-delete-btn" id="fadein-btn">
+              <div><%= link_to "ぬりかえる", edit_record_path(@record.id) %></div>
+              <div><%= link_to "けす", record_path(@record.id), method: :delete %></div>
             </div>
-            <% @records.first(10).each do |record| %>
-              <div class="records-content">
-              <div class="title-date">
-                <%= record.created_at.strftime('%Y/%m/%d')%>
-                <%= link_to record.title, record_path(record.id) %>
-              </div>
-              <div class="record-text"><%= record.content.truncate(50) %></div>
-              </div>
-            <% end %>
+            <script>$("#fadein-btn").fadeIn(1000);</script>
           </div>
-          <div class="record">
-            <div class="record-width">
-              <div class="content" id="fadein-content"><%= simple_format(@record.content) %></div>
-              <div class="image" id="fadein-image">
-                <%= image_tag @record.image.variant(resize: '500x500') %>
-                <div class="record-height-weight">
-                  <% if @record.height.present? %>
-                    <div class="record-height"><%= "身長：#{@record.height}cm" %></div>
-                  <% end %>
-                  <% if @record.weight.present? %>
-                    <% if @record.weight < 1000 %>
-                      <div class="record-weight"><%= "体重：#{@record.weight}kg" %></div>
-                    <% else %>
-                      <div class="record-weight-g"><%= "体重：#{@record.weight}g" %></div>
-                    <% end %>
-                  <% end %>
-                </div>
-              </div>
-              <div class="date-title" id="fadein-title">
-                  <%= @record.created_at.strftime('%Y/%m/%d') %>
-                  <%= @record.title %>
-              </div>
-              <script>$("#fadein-content").fadeIn(1000);</script>
-              <script>$("#fadein-image").fadeIn(1000);</script>
-              <script>$("#fadein-title").fadeIn(1000);</script>
+          <% @records.first(10).each do |record| %>
+            <div class="records-content">
+            <div class="title-date">
+              <%= record.created_at.strftime('%Y/%m/%d')%>
+              <%= link_to record.title, record_path(record.id) %>
             </div>
+            <div class="record-text"><%= record.content.truncate(50) %></div>
+            </div>
+          <% end %>
+        </div>
+        <div class="record">
+          <div class="record-width">
+            <div class="content" id="fadein-content"><%= simple_format(@record.content) %></div>
+            <div class="image" id="fadein-image">
+              <%= image_tag @record.image.variant(resize: '500x500') %>
+              <div class="record-height-weight">
+                <% if @record.height.present? %>
+                  <div class="record-height"><%= "身長：#{@record.height}cm" %></div>
+                <% end %>
+                <% if @record.weight.present? %>
+                  <% if @record.weight < 1000 %>
+                    <div class="record-weight"><%= "体重：#{@record.weight}kg" %></div>
+                  <% else %>
+                    <div class="record-weight-g"><%= "体重：#{@record.weight}g" %></div>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+            <div class="date-title" id="fadein-title">
+                <%= @record.created_at.strftime('%Y/%m/%d') %>
+                <%= @record.title %>
+            </div>
+            <script>$("#fadein-content").fadeIn(1000);</script>
+            <script>$("#fadein-image").fadeIn(1000);</script>
+            <script>$("#fadein-title").fadeIn(1000);</script>
           </div>
         </div>
       </div>
