@@ -1,16 +1,18 @@
 class RecordsController < ApplicationController
   before_action :authenticate_user!, except: :home
 
+  #ホームページ
   def home
   end
 
+  #月毎のページ遷移
   def eight
     @eight = Record.where('created_at like ?','%-08-%').order(created_at: :desc)
   end
   def nine
     @nine = Record.where('created_at like ?','%-09-%').order(created_at: :desc)
   end
-
+  
   def index
     @records = Record.order(created_at: :desc)
   end
