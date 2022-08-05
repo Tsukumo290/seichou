@@ -228,6 +228,9 @@
   margin-right: 35px;
   display: none;
 }
+.image img {
+  border-radius: 10px;
+}
 
 .content {
   writing-mode: vertical-rl;
