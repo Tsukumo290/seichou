@@ -14,9 +14,8 @@
   <div class="container">
     <%= form_with(model: @record, id: 'new_post', local: true) do |form| %>
       <div class="image-preview">
-        <%# if @record.image.present? %>
-          <div id="previews"><%= image_tag "20200501_noimage.png" %></div>
-        <%# end %>
+        <div id="previews"></div>
+        <div id="preview-none"><%= image_tag "20200501_noimage.png" %></div>
         <div class="image-form"><%= form.file_field :image %></div>
       </div>
       <div><%= form.text_field :title, placeholder: "タイトル" %></div>

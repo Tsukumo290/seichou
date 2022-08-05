@@ -241,6 +241,7 @@
   word-break: break-all;
   height: 500px;
   display: none;
+  width: 300px;
 }
 .record-height-weight {
   text-align: right;
@@ -298,6 +299,11 @@
   display: flex;
 }
 #previews img {
+  height: 200px;
+  width: 200px;
+  border-radius: 15px;
+}
+#preview-none img {
   height: 200px;
   width: 200px;
 }
