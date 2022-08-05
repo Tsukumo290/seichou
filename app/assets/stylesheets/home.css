@@ -252,9 +252,8 @@
   padding-right: 7px;
 }
 .record-weight {
-  padding-right: 11px;
+  padding-right: 21px;
 }
-
 /*newページのCSS*/
 .contents-new {
   height: calc(100vh - 100px); 
