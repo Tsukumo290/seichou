@@ -245,7 +245,7 @@
   word-break: break-all;
   height: 500px;
   display: none;
-  width: 300px;
+  width: 215px;
   overflow: scroll;
   -ms-overflow-style: none;    /* IE, Edge 対応 */
   scrollbar-width: none;       /* Firefox 対応 */
