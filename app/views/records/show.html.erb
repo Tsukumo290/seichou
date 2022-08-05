@@ -53,7 +53,17 @@
         <div class="record">
           <div class="record-width">
             <div class="content" id="fadein-content"><%= simple_format(@record.content) %></div>
-            <div class="image" id="fadein-image"><%= image_tag @record.image.variant(resize: '500x500') %></div>
+            <div class="image" id="fadein-image">
+              <%= image_tag @record.image.variant(resize: '500x500') %>
+              <div class="record-height-weight">
+                <% if @record.height.present? %>
+                  <div class="record-height"><%= "身長：#{@record.height}cm" %></div>
+                <% end %>
+                <% if @record.weight.present? %>
+                  <div class="record-weight"><%= "体重：#{@record.weight}kg" %></div>
+                <% end %>
+              </div>
+            </div>
             <div class="date-title" id="fadein-title">
                 <%= @record.created_at.strftime('%Y/%m/%d') %>
                 <%= @record.title %>
