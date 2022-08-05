@@ -12,8 +12,13 @@
 <div class="contents-new">
   <div class="new">
   <div class="container">
-    <%= form_with(model: @record, local: true) do |form| %>
-      <div><%= form.file_field :image %></div>
+    <%= form_with(model: @record, id: 'new_post', local: true) do |form| %>
+      <div class="image-preview">
+        <%# if @record.image.present? %>
+          <div id="previews"><%= image_tag "20200501_noimage.png" %></div>
+        <%# end %>
+        <div class="image-form"><%= form.file_field :image %></div>
+      </div>
       <div><%= form.text_field :title, placeholder: "タイトル" %></div>
       <div><%= form.text_area :content, placeholder: "おもいで", maxlength: "200" %></div>
       <div>

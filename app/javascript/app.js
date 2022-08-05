@@ -1,5 +1,6 @@
 window.addEventListener('load', function(){
   var circle = document.getElementById("circle");
+  if (!circle) return null;
   var upBtn = document.getElementById("upBtn");
   var downBtn = document.getElementById("downBtn");
 

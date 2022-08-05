@@ -269,7 +269,7 @@
   border: 1px groove gray;
 }
 .container{
-  height: 600px;
+  height: 740px;
   width:800px;
   background-color: #fff;
   padding: 30px 24px 24px;
@@ -292,4 +292,16 @@
   background-color: #f1f2ed;
   height: calc(100vh - 100px); 
   width: 100vw;
+}
+/*プレビュー機能のcss*/
+.image-preview {
+  display: flex;
+}
+#previews img {
+  height: 200px;
+  width: 200px;
+}
+.image-form{
+  padding-top: 140px;
+  padding-left: 10px;
 }
