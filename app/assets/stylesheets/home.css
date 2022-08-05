@@ -146,11 +146,12 @@
   font-size: 32px;
   color: black;
 }
-
+/* トップページのcss */
 .seichou-main {
   height: calc(100vh - 100px);
   width: 100vw;
 }
+
 .main-contents {
   display: flex;
   justify-content: right;
@@ -162,6 +163,8 @@
   background-color: #CBC3BC;
   border-radius: 15px 0 0 0;
   overflow: scroll;
+  -ms-overflow-style: none;    /* IE, Edge 対応 */
+  scrollbar-width: none;       /* Firefox 対応 */
   border-top: 1px groove gray;
   border-left: 1px groove gray;
 }
@@ -181,7 +184,6 @@
 .record {
   height: calc(100vh - 100px); 
   width: 864px;
-  background-color: #fff;
   background-color: #CBC3BC;
   border-radius: 0 15px 0 0;
   border-top: 1px groove gray;
@@ -243,6 +245,8 @@
   display: none;
   width: 300px;
   overflow: scroll;
+  -ms-overflow-style: none;    /* IE, Edge 対応 */
+  scrollbar-width: none;       /* Firefox 対応 */
 }
 .record-height-weight {
   text-align: right;
@@ -253,6 +257,9 @@
 }
 .record-weight {
   padding-right: 21px;
+}
+.content::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+  display:none;
 }
 /*newページのCSS*/
 .contents-new {
@@ -309,6 +316,7 @@
 #preview-none img {
   height: 200px;
   width: 200px;
+  border-radius: 15px;
 }
 .image-form{
   padding-top: 140px;
