@@ -3,6 +3,11 @@
     <div class="seichou-header">
         <div class="seichou-title">
           <%= link_to "たけのこ", root_path %>
+          <h1>Ajax#index</h1>
+          <p id="hoge">赤色になるよ</p>
+          <script>
+            $("#hoge").css("color","red")
+          </script>
         </div>
         <div class="seichou-new">
           <%= link_to "きろくをつくる", new_record_path %>
