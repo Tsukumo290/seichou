@@ -60,7 +60,11 @@
                   <div class="record-height"><%= "身長：#{@record.height}cm" %></div>
                 <% end %>
                 <% if @record.weight.present? %>
-                  <div class="record-weight"><%= "体重：#{@record.weight}kg" %></div>
+                  <% if @record.weight < 1000 %>
+                    <div class="record-weight"><%= "体重：#{@record.weight}kg" %></div>
+                  <% else %>
+                    <div class="record-weight-g"><%= "体重：#{@record.weight}g" %></div>
+                  <% end %>
                 <% end %>
               </div>
             </div>

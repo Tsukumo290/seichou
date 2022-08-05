@@ -18,11 +18,11 @@
         <div id="preview-none"><%= image_tag "20200501_noimage.png" %></div>
         <div class="image-form"><%= form.file_field :image %></div>
       </div>
-      <div><%= form.text_field :title, placeholder: "タイトル", maxlength: "20" %></div>
+      <div><%= form.text_field :title, placeholder: "タイトル", maxlength: "10" %></div>
       <div><%= form.text_area :content, placeholder: "おもいで", maxlength: "200" %></div>
       <div>
       <%= form.text_field :height, placeholder: "しんちょう", maxlength: "3" %>
-      <%= form.text_field :weight, placeholder: "たいじゅう", maxlength: "5" %>
+      <%= form.text_field :weight, placeholder: "たいじゅう", maxlength: "4" %>
       </div>
       <%= form.submit "さくせい" %>
     <% end %>

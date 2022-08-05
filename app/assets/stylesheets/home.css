@@ -242,13 +242,17 @@
   height: 500px;
   display: none;
   width: 300px;
+  overflow: scroll;
 }
 .record-height-weight {
   text-align: right;
-  padding: 10px 20px 0 0;
+  padding-top: 10px;
+}
+.record-height {
+  padding-right: 7px;
 }
 .record-weight {
-  padding-right: 4px;
+  padding-right: 11px;
 }
 
 /*newページのCSS*/
