@@ -21,9 +21,9 @@ class Record < ApplicationRecord
       self.tags.delete Tag.find_by(name_tag: old_name)
     end
 
-    saverecord_tags.each do |new_name|
-    record_tag = Tag.find_or_create_by(name_tag: new_name)
-    self.tags << record_tag
+    new_tags.each do |new_name|
+      record_tag = Tag.find_or_create_by(name_tag: new_name)
+      self.tags << record_tag
     end
   end
 end

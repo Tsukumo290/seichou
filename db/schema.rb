@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2022_08_06_075949) do
     t.bigint "tag_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["record_id", "tag_id"], name: "index_tag_relationships_on_record_id_and_tag_id", unique: true
     t.index ["record_id"], name: "index_tag_relationships_on_record_id"
     t.index ["tag_id"], name: "index_tag_relationships_on_tag_id"
   end

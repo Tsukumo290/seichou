@@ -36,13 +36,7 @@ class RecordsController < ApplicationController
       render :new
     end
   end
-
-  def search
-    return nil if params[:keyword] == ""
-    tag = Tag.where(['tag_name LIKE ?', "%#{params[:keyword]}%"] )
-    render json:{ keyword: tag }
-  end
-
+  
   def show
     @records = Record.order(created_at: :desc)
     @record = Record.find(params[:id])

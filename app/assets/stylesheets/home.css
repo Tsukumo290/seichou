@@ -313,18 +313,7 @@
   height: calc(100vh - 100px); 
   width: 100vw;
 }
-/*タグ付け機能の逐次検索機能*/
-#search-result{
-  width: 30%;
-}
 
-.child{
-  margin: 5px;
-  border: 1px solid #dedede;
-  background-color: #F4F4F4;
-  padding: 5px;
-  font-size: 12px;
-}
 /*プレビュー機能のcss*/
 .image-preview {
   display: flex;
