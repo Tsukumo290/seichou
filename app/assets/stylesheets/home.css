@@ -71,7 +71,7 @@
   right: 0px;
 }
 .two {
-  top: 100px;
+  top: 65px;
   left: 482px;
   transform: rotate(-90deg);
 }
@@ -79,6 +79,11 @@
   bottom: 470px;
   left: 70px;
   transform: rotate(-180deg);
+}
+.four {
+  bottom: 65px;
+  right: 512px;
+  transform: rotate(-270deg);
 }
 .control {
   position: absolute;
@@ -284,7 +289,7 @@
   border: 1px groove gray;
 }
 .container{
-  height: 740px;
+  height: 785px;
   width:800px;
   background-color: #fff;
   padding: 30px 24px 24px;
