@@ -19,7 +19,7 @@ class RecordsController < ApplicationController
   end
   
   def index
-    @records = Record.order(created_at: :desc)
+    @records = Record.where(user_id: current_user.id).includes(:user).order(created_at: :desc)
   end
 
   def new
@@ -38,7 +38,7 @@ class RecordsController < ApplicationController
   end
   
   def show
-    @records = Record.order(created_at: :desc)
+    @records = Record.where(user_id: current_user.id).includes(:user).order(created_at: :desc)
     @record = Record.find(params[:id])
   end
 
