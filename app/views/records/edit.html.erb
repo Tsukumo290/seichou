@@ -20,11 +20,11 @@
           </div>
           <div><%= form.text_field :title, placeholder: "タイトル", maxlength: "10" %></div>
           <div><%= form.text_area :content, placeholder: "おもいで", maxlength: "200" %></div>
-          <%= form.text_field :tag_ids,value: @tag_list,placeholder: "タグをつける。複数つけるには','で区切ってください。" %>
           <div>
             <%= form.text_field :height, placeholder: "しんちょう", maxlength: "3" %>
             <%= form.text_field :weight, placeholder: "たいじゅう", maxlength: "4" %>
           </div>
+          <%= form.text_field :tag_ids,value: @tag_list,placeholder: "タグをつける。複数つけるには','で区切ってください。" %>
           <%= form.submit "さくせい" %>
         <% end %>
       </div>

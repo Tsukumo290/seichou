@@ -24,7 +24,10 @@
             <%= form.text_field :height, placeholder: "しんちょう", maxlength: "3" %>
             <%= form.text_field :weight, placeholder: "たいじゅう", maxlength: "4" %>
           </div>
-          <%= form.text_field :tag_ids, class: "form-control", id:'tag_ids',placeholder: "タグをつける。複数つけるには','で区切ってください。" %>
+          <div class="tag-field">
+            <%= form.text_field :tag_ids, class: "form-control", id:'tag_ids',placeholder: "タグをつける。複数つけるには','で区切ってください。" %>
+            <div id="search-result"></div>
+          </div>
           <%= form.submit "さくせい" %>
         <% end %>
       </div>

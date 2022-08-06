@@ -7,7 +7,7 @@ class RecordsController < ApplicationController
 
   #アルバムページ
   def album
-    
+
   end
 
   #月毎のページ遷移
@@ -35,6 +35,12 @@ class RecordsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def search
+    return nil if params[:keyword] == ""
+    tag = Tag.where(['tag_name LIKE ?', "%#{params[:keyword]}%"] )
+    render json:{ keyword: tag }
   end
 
   def show
