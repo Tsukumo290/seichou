@@ -23,7 +23,9 @@ class RecordsController < ApplicationController
 
   def create
     @record = Record.new(record_params)
+    tag_list = params[:record][:tag_ids].split(',')
     if @record.save
+      @record.save_tags(tag_list)
       redirect_to record_path(@record.id)
     else
       render :new
@@ -37,11 +39,14 @@ class RecordsController < ApplicationController
 
   def edit
     @record = Record.find(params[:id])
+    @tag_list =@record.tags.pluck(:name_tag).join(",")
   end
 
   def update
     @record = Record.find(params[:id])
+    tag_list = params[:record][:tag_ids].split(',')
     if @record.update(record_params)
+      @record.save_tags(tag_list)
       redirect_to record_path(@record.id)
     else
       render :edit
