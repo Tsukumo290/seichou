@@ -12,6 +12,10 @@ class Record < ApplicationRecord
   validates :height, allow_blank: true,  numericality: {only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 999}
   validates :weight, allow_blank: true,  numericality: {only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 9999}
 
+  def self.records_serach(search)
+    Record.where(['title LIKE ? OR content LIKE ?', "%#{search}%", "%#{search}%"])
+  end
+
   def save_tags(saverecord_tags)
     current_tags = self.tags.pluck(:name_tag) unless self.tags.nil?
     old_tags = current_tags - saverecord_tags

@@ -30,6 +30,12 @@
             <option value="">11月のアルバム</option>
             <option value="">12月のアルバム</option>
           </select>
+          <div class="tag-search">
+            <div class="tag-title">タグで検索する</div>
+            <% @tag_lists.each do |list| %>
+              <div class="tags"><%= link_to list.name_tag, tag_path(tag_id: list.id) %></div>
+            <% end %>
+          </div>
         </div>
         <div class="records">
           <div class="memory">おもいで</div>

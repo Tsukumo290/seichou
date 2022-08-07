@@ -1,0 +1,6 @@
+<% @tag_lists.each do |list| %>
+  <%= link_to list.name_tag, tag_path(tag_id: list.id) %>
+<% end %>
+<% @records.each do |record| %>
+  <%= record.title %>
+<% end %>

@@ -7,6 +7,19 @@ class RecordsController < ApplicationController
   #ホームページ
   def home
   end
+  
+  #タグ検索ページ
+  def tag
+    if params[:search].present?
+      @records = Record.records_serach(params[:search])
+    elsif params[:tag_id].present?
+      @tag = Tag.find(params[:tag_id])
+      @records = @tag.records.order(created_at: :desc)
+    else
+      @records = Record.all.order(created_at: :desc)
+    end
+    @tag_lists = Tag.all
+  end
 
   #月毎のページ遷移
   def eight
@@ -17,6 +30,7 @@ class RecordsController < ApplicationController
   end
   
   def index
+    @tag_lists = Tag.all
   end
 
   def new
@@ -35,6 +49,7 @@ class RecordsController < ApplicationController
   end
   
   def show
+    @tag_lists = Tag.all
   end
 
   def edit
