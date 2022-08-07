@@ -8,11 +8,6 @@ class RecordsController < ApplicationController
   def home
   end
 
-  #アルバムページ
-  def album
-
-  end
-
   #月毎のページ遷移
   def eight
     @eight = Record.where('created_at like ?','%-08-%').where(user_id: current_user.id).includes(:user).order(created_at: :desc)
