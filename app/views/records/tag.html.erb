@@ -1,6 +1,56 @@
-<% @tag_lists.each do |list| %>
-  <%= link_to list.name_tag, tag_path(tag_id: list.id) %>
-<% end %>
-<% @records.each do |record| %>
-  <%= record.title %>
-<% end %>
+<div class="tag-page">
+
+  <header class="tag-header">
+    <div class="tag-header-bar">
+      <div class="tag-header-title"><%= link_to "たけのこ", root_path %></div>
+      <div class="tag-header-back"><%= link_to "もどる", records_path %></div>
+    </div>
+  </header>
+
+  <div class="tag-contents">
+
+    <div class="tag-side">
+      <div class="tag-lists">
+        <div class="tag-side-title">タグリスト</div>
+        <div class="tag-side-tags">
+          <% @tag_lists.each do |list| %>
+            <div class="tags">
+              <%= link_to list.name_tag, tag_path(tag_id: list.id) %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="tag-main">
+      <div class="tag-records-title"><%= "##{@tag.name_tag}のおもいで" %></div>
+      <div class="tag-records">
+        <% @records.each do |record| %>
+          <div class="tag-record-title"><%= record.title %></div>
+          <div class="tag-image"><%= image_tag record.image.variant(resize: '500x500') %></div>
+          <div>
+            <% if record.height.present? %>
+              <%= "身長:#{record.height}cm" %>
+            <% end %>
+            <% if record.weight.present? %>
+              <% if record.weight < 1000 %>
+                <%= "体重:#{record.weight}kg" %>
+              <% else %>
+                <%= "体重:#{record.weight}g" %>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="tag-record-content"><%= record.content %></div>
+          <div><%= record.created_at.strftime('%Y/%m/%d') %></div>
+          <div class="tag-record-tag">
+            <% record.tags.each do |tag| %>
+              <%= "##{tag.name_tag}" %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+
+</div>
