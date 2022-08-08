@@ -5,6 +5,5 @@ Rails.application.routes.draw do
   resources :records
   
   get 'tag', to: 'records#tag'
-  get 'eight', to: 'records#eight'
-  get 'nine', to: 'records#nine'
+
 end

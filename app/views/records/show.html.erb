@@ -13,28 +13,12 @@
   <main>
     <div class="seichou-main">
       <div class="main-contents">
-        <div class="month">
+        <div class="tag-area">
           <div class="tag-search">
             <% @tag_lists.first(1).each do |list| %>
               <div class="tag-one"><%= link_to "タグで検索する", tag_path(tag_id: list.id) %></div>
             <% end %>
           </div>
-          <div class="menu-title">アルバム</div>
-          <select class="menu" id="month" onChange="location.href=value;">
-            <option value="">月別</option>
-            <option value="">1月のアルバム</option>
-            <option value="">2月のアルバム</option>
-            <option value="">3月のアルバム</option>
-            <option value="">4月のアルバム</option>
-            <option value="">5月のアルバム</option>
-            <option value="">6月のアルバム</option>
-            <option value="">7月のアルバム</option>
-            <option value="/eight">8月のアルバム</option>
-            <option value="/nine">9月のアルバム</option>
-            <option value="">10月のアルバム</option>
-            <option value="">11月のアルバム</option>
-            <option value="">12月のアルバム</option>
-          </select>
         </div>
         <div class="records">
           <div class="edit-delete">

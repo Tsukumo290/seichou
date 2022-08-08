@@ -21,14 +21,6 @@ class RecordsController < ApplicationController
     @tag_lists = Tag.all
   end
 
-  #月毎のページ遷移
-  def eight
-    @eight = Record.where('created_at like ?','%-08-%').where(user_id: current_user.id).includes(:user).order(created_at: :desc)
-  end
-  def nine
-    @nine = Record.where('created_at like ?','%-09-%').where(user_id: current_user.id).includes(:user).order(created_at: :desc)
-  end
-  
   def index
     @tag_lists = Tag.all
   end
