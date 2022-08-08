@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :incomes
   get 'top', to: 'incomes#top'
   resources :fixedcosts
+  resources :variablecosts
 end
