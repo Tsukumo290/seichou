@@ -47,6 +47,10 @@
               <%= "##{tag.name_tag}" %>
             <% end %>
           </div>
+          <div class="tag-edit-delete">
+            <%= link_to "ぬりかえる", edit_record_path(record.id) %>
+            <%= link_to "けす", record_path(record.id), method: :delete %>
+          </div>
         <% end %>
       </div>
     </div>

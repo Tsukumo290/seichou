@@ -421,6 +421,9 @@
   border-radius: 20px;
 }
 .tag-record-tag {
-  margin-bottom: 30px;
   font-size: 18px;
+  width: 700px;
+}
+.tag-edit-delete {
+  margin-bottom: 30px;
 }
